@@ -19,6 +19,7 @@ yarn-debug.log*
 yarn-error.log*
 /nbproject
 /.idea
+*.mdx
 
 # env files
 .env
