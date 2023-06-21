@@ -10,3 +10,12 @@ export const deciderPosition = (
             'relative my-6 mx-auto w-auto md_screen:max-w-lg sm_screen:max-w-sm lg_screen:max-w-3xl',
     }[postion] as string
 }
+
+export const findKeyWithTrueValue = (obj: Record<string, boolean>): string => {
+    for (const [key, value] of Object.entries(obj)) {
+        if (value) {
+            return key
+        }
+    }
+    return ''
+}
