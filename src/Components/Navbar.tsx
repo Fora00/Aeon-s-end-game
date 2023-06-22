@@ -1,4 +1,5 @@
-import { Bars3CenterLeftIcon } from '@heroicons/react/20/solid'
+import { Bars3CenterLeftIcon, TrashIcon } from '@heroicons/react/20/solid'
+
 import ModalContext from '#/Context/ModalContext'
 import { useContext } from 'react'
 
@@ -10,7 +11,7 @@ export const Navbar = (): JSX.Element => {
             {' '}
             <nav className="p-2 w-full bg-blue-600 flex flex-row justify-between">
                 <Bars3CenterLeftIcon
-                    className="icon text-white"
+                    className="icon-black "
                     onClick={() => {
                         openModal('hamburger')
                     }}
@@ -18,6 +19,12 @@ export const Navbar = (): JSX.Element => {
                 <h1 className=" uppercase text-white w-full text-center">
                     Aeon's End
                 </h1>{' '}
+                <TrashIcon
+                    className="icon-red"
+                    onClick={() => {
+                        openModal('reset')
+                    }}
+                />
             </nav>
         </>
     )

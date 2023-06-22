@@ -4,9 +4,24 @@
 
 @layer components {
     .icon {
-        @apply h-6 w-6;
+        @apply h-6 w-6 bg-white rounded-full border p-0.5;
     }
     .modal {
         @apply z-top;
+    }
+}
+
+@layer utilities {
+    .icon-black {
+        @apply icon text-black;
+    }
+    .icon-red {
+        @apply icon text-red-500;
+    }
+    .icon-green {
+        @apply icon text-green-500;
+    }
+    .icon-yellow {
+        @apply icon text-yellow-500;
     }
 }

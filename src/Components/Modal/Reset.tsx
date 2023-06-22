@@ -6,7 +6,7 @@ type Props = {
     onClose?: THandlingState
 }
 
-export const ModalHamburger = ({ onClose }: Props): JSX.Element => {
+export const ModalReset = ({ onClose }: Props): JSX.Element => {
     return (
         <Modal onClose={onClose}>
             <div className="relative flex  w-full flex-col self-center rounded-lg border-0 bg-white shadow-lg outline-none dark:bg-gray-200">
@@ -21,7 +21,7 @@ export const ModalHamburger = ({ onClose }: Props): JSX.Element => {
                     </div>
                 </div>
                 <div className=" flex items-center justify-end rounded-b border-t border-solid  p-3 ">
-                    <XMarkIcon className="icon-red" onClick={onClose} />
+                    <XMarkIcon className="icon-red " onClick={onClose} />
                 </div>
             </div>
         </Modal>
