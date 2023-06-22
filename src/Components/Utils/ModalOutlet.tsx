@@ -1,7 +1,7 @@
+import ModalContext from '#/Context/ModalContext'
+import { ModalHamburger } from '@/Modal/Hamburger'
+import { findKeyWithTrueValue } from '#/Functions/generic'
 import { useContext } from 'react'
-import { ModalHamburger } from '../../Modal/Hamburger'
-import ModalContext from '../../Services/Context/ModalContext'
-import { findKeyWithTrueValue } from '../../Services/functions'
 
 export const UtilsModalOutlet = (): JSX.Element => {
     const { closeModal, modalType } = useContext(ModalContext)

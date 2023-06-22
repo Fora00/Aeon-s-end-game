@@ -1,6 +1,6 @@
-import { Body } from './Components/Body'
-import { Navbar } from './Components/Navbar'
-import { UtilsModalOutlet } from './Components/Utils/ModalOutlet'
+import { Body } from '@/Body'
+import { Navbar } from '@/Navbar'
+import { UtilsModalOutlet } from '@/Utils/ModalOutlet'
 
 export const App = (): JSX.Element => {
     return (

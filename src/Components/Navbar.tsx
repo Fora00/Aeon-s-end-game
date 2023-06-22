@@ -1,5 +1,5 @@
 import { Bars3CenterLeftIcon } from '@heroicons/react/20/solid'
-import ModalContext from '../Services/Context/ModalContext'
+import ModalContext from '#/Context/ModalContext'
 import { useContext } from 'react'
 
 export const Navbar = (): JSX.Element => {

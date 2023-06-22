@@ -1,12 +1,13 @@
 import React from 'react'
+import { THandlingState } from 'TS/types'
 
-interface ModalContextProps {
+type ModalContext = {
     modalType: Record<string, boolean>
-    openModal: (modalName: string) => void
-    closeModal: (modalName: string) => void
+    openModal: THandlingState
+    closeModal: THandlingState
 }
 
-const ModalContext = React.createContext<ModalContextProps>({
+const ModalContext = React.createContext<ModalContext>({
     modalType: {},
     openModal: () => {},
     closeModal: () => {},

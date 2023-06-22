@@ -1,8 +1,9 @@
-import { Modal } from '../Generator/Modal'
+import { Modal } from '+/Modal'
+import { THandlingState } from 'TS/types'
 import { XMarkIcon } from '@heroicons/react/20/solid'
 
 type Props = {
-    onClose?: () => void
+    onClose?: THandlingState
 }
 
 export const ModalHamburger = ({ onClose }: Props): JSX.Element => {

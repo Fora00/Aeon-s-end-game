@@ -1,7 +1,7 @@
 import { ReactNode, useEffect, useRef } from 'react'
 
 import { createPortal } from 'react-dom'
-import { deciderPosition } from '../Services/functions'
+import { deciderPosition } from '#/Functions/generic'
 
 type Props = {
     position?: 'top' | 'left' | 'bottom' | 'right' | 'default'

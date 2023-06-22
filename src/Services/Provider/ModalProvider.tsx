@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-
-import ModalContext from '../Context/ModalContext'
+import ModalContext from '#/Context/ModalContext'
+import { useState } from 'react'
 
 type Props = {
     children: React.ReactNode
@@ -9,12 +8,12 @@ type Props = {
 const ModalProvider = ({ children }: Props) => {
     const [modalType, setModalType] = useState<Record<string, boolean>>({})
 
-    const openModal = (modalName: string) => {
-        helperFunction(modalName, true)
+    const openModal = (val: unknown) => {
+        helperFunction(val as string, true)
     }
 
-    const closeModal = (modalName: string) => {
-        helperFunction(modalName, false)
+    const closeModal = (val: unknown) => {
+        helperFunction(val as string, false)
     }
 
     const helperFunction = (modalName: string, action: boolean) => {

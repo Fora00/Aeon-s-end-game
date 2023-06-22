@@ -11,7 +11,7 @@ export const deciderPosition = (
     }[postion] as string
 }
 
-export const findKeyWithTrueValue = (obj: Record<string, boolean>): string => {
+export const findKeyWithTrueValue = (obj: Record<string, unknown>): string => {
     for (const [key, value] of Object.entries(obj)) {
         if (value) {
             return key
