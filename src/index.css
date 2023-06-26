@@ -24,4 +24,7 @@
     .icon-yellow {
         @apply icon text-yellow-500;
     }
+    .icon-blue {
+        @apply icon text-blue-500;
+    }
 }
