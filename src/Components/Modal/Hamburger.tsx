@@ -4,12 +4,19 @@ import { CONSTANTS } from '#/Constants/generic'
 import { Modal } from '+/Modal'
 import { THandlingState } from 'TS/types'
 import { toCapitalize } from '#/Functions/utility'
+import { useNavigate } from 'react-router-dom'
 
 type Props = {
     onClose?: THandlingState
 }
 
 export const ModalHamburger = ({ onClose }: Props): JSX.Element => {
+    const navigate = useNavigate()
+
+    const handleNavigation = (setting: string) => {
+        navigate(`/settings/${setting}`)
+    }
+
     return (
         <Modal onClose={onClose}>
             <div className="relative flex  w-full flex-col self-center rounded-lg border-0 bg-white shadow-lg outline-none dark:bg-gray-200">
@@ -22,7 +29,11 @@ export const ModalHamburger = ({ onClose }: Props): JSX.Element => {
                     <div className=" flex flex-col items-center gap-5 overflow-x-auto p-3 ">
                         {CONSTANTS.SETTINGS.map((setting) => {
                             return (
-                                <div className="bg-white  gap-1 rounded-md  p-1 flex flex-row justify-between w-full">
+                                <div
+                                    className="bg-white  gap-1 rounded-md  p-1 flex flex-row justify-between w-full"
+                                    key={crypto.randomUUID()}
+                                    onClick={() => handleNavigation(setting)}
+                                >
                                     <p className="font-bold">
                                         {toCapitalize(setting)}
                                     </p>

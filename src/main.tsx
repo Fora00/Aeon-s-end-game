@@ -1,14 +1,19 @@
 import './index.css'
 
-import { App } from './App'
-import ModalProvider from './Services/Provider/ModalProvider'
+import { BrowserRouter } from 'react-router-dom'
+import ModalProvider from '#/Provider/ModalProvider'
+import { PagesRouter } from '§/Router'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { UtilsModalOutlet } from '@/Utils/ModalOutlet'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
         <ModalProvider>
-            <App />
+            <BrowserRouter>
+                <PagesRouter />
+                <UtilsModalOutlet />
+            </BrowserRouter>
         </ModalProvider>
     </React.StrictMode>
 )

@@ -11,6 +11,7 @@
             "@/*": ["src/Components/*"],
             "+/*": ["src/Generators/*"],
             "#/*": ["src/Services/*"],
+            "§/*": ["src/Pages/*"],
             "TS/*": ["src/Typescript/*"]
         },
         /* Bundler mode */
